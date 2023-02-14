@@ -77,8 +77,12 @@ module.exports = {
 		module: {
 				rules: [
 						{
-								test: /.(sass|less|css)$/,
-								use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+								test: /\.s[ac]ss$/i,
+								use: [
+										MiniCssExtractPlugin.loader,
+										'css-loader',
+										'sass-loader'
+								],
 						},
 						{
 								test: /\.(png|jpg|svg|gift)$/,
